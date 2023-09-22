@@ -1,0 +1,10 @@
+#site {
+    display: grid;
+}
+
+#posterss {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'auto auto auto';
+}
