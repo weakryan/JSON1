@@ -1,5 +1,7 @@
 let nomeSerie = document.querySelector("#nomeSerie");
-let posterSerie = document.querySelector("#posterSerie");
+let resumo = document.querySelector("#resumo")
+let nota = document.querySelector("#nota")
+let posterss = document.querySelector("#posterss");
 let generoSerie = document.querySelector("#generoSerie");
 let fotosAtores = document.querySelector("#fotosAtores");
 let posterTemp1 = document.querySelector("#posterTemp1");
@@ -7,21 +9,26 @@ let posterTemp2 = document.querySelector("#posterTemp2");
 let posterTemp3 = document.querySelector("#posterTemp3");
 let nomeEp = document.querySelector("#nomeEp");
 
-nomeSerie.innerHTML = bd.nome;
+nomeSerie.innerHTML = "Título da série: " + bd.nome;
+resumo.innerHTML = "Resumo da Série: " + bd.resumo;
+nota.innerHTML = "Nota da Série: " + bd.nota
 posterSerie.innerHTML = "<img src='" + bd.fotoPoster + "'>";
 generoSerie.innerHTML = bd.generos;
-fotosAtores.innerHTML = "<img src='" + bd.elenco[1].foto + "'>";
-posterTemp1.innerHTML = "<img src='" + bd.temporadas[0].poster + "'>" + " <br> Número de Episódios: " + bd.temporadas[0].numero_episodios;
-posterTemp2.innerHTML = "<img src='" + bd.temporadas[1].poster + "'>" + " <br> Número de Episódios: " + bd.temporadas[1].numero_episodios;
-posterTemp3.innerHTML = "<img src='" + bd.temporadas[2].poster + "'>" + " <br> Número de Episódios: " + bd.temporadas[2].numero_episodios;
-nomeEp.innerHTML =  "Primeiro Episódio da temporada <br>" + bd.temporadas[1].episodios[0].nome;
+
+for (let i = 0; i < bd.elenco.length; i++) {
+    fotosAtores.innerHTML += "<img src='" + bd.elenco[i].foto + "'>";
+    
+}
+
+for (let b = 0; b < bd.temporadas.length; b++) {
+    posterss.innerHTML += "<br> <br> <br> <img src='" + bd.temporadas[b].poster + "'>" + " <br> Numero de Episódios: "  + bd.temporadas[b].numero_episodios;
+    
+}
+
+for (let a = 0; a < bd.temporadas[1].episodios[a].nome.length; a++) {
+    nomeEp.innerHTML += " <br> Nome do episódio da Segunda Temporada: " + bd.temporadas[1] .episodios[a].nome + "<br>";
+    
+}
 
 
-
-// • Liste o nome de cada um dos episódios da segunda temporada
-
-
-
-
-//15 atores
-
+// nomeEp.innerHTML =  "Primeiro Episódio da temporada <br>" + bd.temporadas[1].episodios[0].nome;

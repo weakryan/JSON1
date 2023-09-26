@@ -1,10 +1,18 @@
 #site {
     display: grid;
 }
+#posterSerie {
+    text-align: center;
+    
+}
 
 #posterss {
     text-align: center;
+    
+}
+
+#fotosAtores {
+    text-align: center;
     display: grid;
-    grid-template-areas:
-    'auto auto auto';
+    grid-template-columns: repeat(3, auto);
 }
