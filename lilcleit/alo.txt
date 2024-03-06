@@ -1,9 +1,0 @@
-
-for (let i = 0; i < bd.elenco.length; i++) {
-    // console.log(bd.nome)
-     let ftsAtores = elenco[1].foto;
-    
-}
-
-fotosAtores.innerHTML = ftsAtores;
-// fotosAtores.innerHTML = "<img src='" + bd.elenco[1].foto + "'>";
